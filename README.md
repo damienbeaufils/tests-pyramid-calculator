@@ -2,6 +2,9 @@
 
 Tests pyramid calculator for Java/Spring application
 
+A french podcast where I talked about test pyramid: http://www.cafe-craft.fr/15
+
+
 ## How to run it
 
 * Update the "where to search" variables
