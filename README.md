@@ -22,10 +22,10 @@ A french podcast where I talked about test pyramid: http://www.cafe-craft.fr/15
 * Example of result
 
 ```
-Java unit tests count (without @RunWith): 315
-Java unit tests count (with @RunWith Mockito, without @Spy): 989
-Java integration tests count (with @RunWith Mockito, but with @Spy): 48
-Java integration tests count (with @RunWith Spring): 850
+Java unit tests count (without @RunWith/@ExtendWith): 315
+Java unit tests count (with @RunWith/@ExtendWith Mockito, without @Spy): 989
+Java integration tests count (with @RunWith/@ExtendWith Mockito, but with @Spy): 48
+Java integration tests count (with @RunWith/@ExtendWith Spring): 850
 Functional tests count: 231
 JavaScript tests count (Jasmine spec): 166
 
