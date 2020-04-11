@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-readonly WHERE_TO_SEARCH_JAVA_UNIT_TESTS="/some/directory1 /some/directory2"
-readonly WHERE_TO_SEARCH_JAVA_INT_TESTS="/some/directory1 /some/directory2"
-readonly WHERE_TO_SEARCH_JS_JASMINE_TESTS="/some/directory1 /some/directory2"
-readonly WHERE_TO_SEARCH_FUNC_TESTS="/some/directory3"
+readonly WHERE_TO_SEARCH_JAVA_UNIT_TESTS="${WHERE_TO_SEARCH_JAVA_UNIT_TESTS:-/some/directory1 /some/directory2}"
+readonly WHERE_TO_SEARCH_JAVA_INT_TESTS="${WHERE_TO_SEARCH_JAVA_INT_TESTS:-/some/directory1 /some/directory2}"
+readonly WHERE_TO_SEARCH_JS_JASMINE_TESTS="${WHERE_TO_SEARCH_JS_JASMINE_TESTS-/some/directory1 /some/directory2}"
+readonly WHERE_TO_SEARCH_FUNC_TESTS="${WHERE_TO_SEARCH_FUNC_TESTS-/some/directory3}"
 
 # Search all *Test.java files which have no @ExtendWith or @RunWith annotation, and calculate the number of @Test inside => unit tests
 readonly JAVA_UNIT_TESTS_PLAIN=$(find $WHERE_TO_SEARCH_JAVA_UNIT_TESTS -name *Test.java -exec grep -L -E "@RunWith|@ExtendWith" {} \; | xargs grep -w "@Test" | wc -l)
