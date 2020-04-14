@@ -7,7 +7,19 @@ A french podcast where I talked about test pyramid: http://www.cafe-craft.fr/15
 
 ## How to run it
 
-* Update the "where to search" variables
+### Docker image
+
+```
+docker run --rm -v $PWD:/code \
+-e WHERE_TO_SEARCH_JAVA_UNIT_TESTS=/code/unit-tests \
+-e WHERE_TO_SEARCH_JAVA_INT_TESTS=/code/integration-tests \
+-e WHERE_TO_SEARCH_JS_JASMINE_TESTS=/code/javascript-tests \
+-e WHERE_TO_SEARCH_FUNC_TESTS=/code/functional-tests flopes/tests-pyramid-calculator
+```
+
+### Standard way
+
+* Update the "where to search" variables in `tests-pyramid-calculator.sh`
   * WHERE_TO_SEARCH_JAVA_UNIT_TESTS
   * WHERE_TO_SEARCH_JAVA_INT_TESTS
   * WHERE_TO_SEARCH_JS_JASMINE_TESTS
@@ -19,7 +31,7 @@ A french podcast where I talked about test pyramid: http://www.cafe-craft.fr/15
 ./tests-pyramid-calculator.sh
 ```
 
-* Example of result
+## Example of result
 
 ```
 Java unit tests count (without @RunWith/@ExtendWith): 315
